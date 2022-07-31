@@ -11,7 +11,7 @@ type SubSystem interface {
 	// Name return subsystem name, like cpu,memory
 	Name() string
 	// Set sets specified resource limit
-	Set(cgroupPath string, resourceConfig *ResourceConfig)
+	Set(cgroupPath string, resourceConfig *ResourceConfig) error
 	// Remove removes cgroup
 	Remove(cgroupPath string) error
 	// Apply a task to cgroup
